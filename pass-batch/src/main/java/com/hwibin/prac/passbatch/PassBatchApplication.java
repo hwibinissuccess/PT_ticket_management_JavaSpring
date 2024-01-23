@@ -1,20 +1,28 @@
 package com.hwibin.prac.passbatch;
 
 
+import org.springframework.batch.core.Job;
+import org.springframework.batch.core.Step;
+import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
+import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
+import org.springframework.batch.core.step.tasklet.Tasklet;
+import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 //@EnableBatchProcessing
 @SpringBootApplication
 public class PassBatchApplication {
 
-//	private final JobBuilder jobBuilder;
+//	private final JobBuilderFactory jobBuilder;
 //
-//	private final StepBuilder stepBuilder;
+//	private final StepBuilderFactory stepBuilder;
 //
-//	public PassBatchApplication(JobBuilder jobBuilder, StepBuilder stepBuilder) {
-//		this.jobBuilder = jobBuilder;
-//		this.stepBuilder = stepBuilder;
+//	public PassBatchApplication(JobBuilderFactory jobBuilder, 	private final StepBuilderFactory stepBuilder;
+//	stepBuilder) {
+//		this.JobBuilderFactory = jobBuilder;
+//		this.StepBuilderFactory = stepBuilder;
 //	}
 //
 //	@Bean
@@ -31,7 +39,7 @@ public class PassBatchApplication {
 //		return this.jobBuilder.get("passJob")
 //				.start(passStep()).build();
 //	}
-//
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(PassBatchApplication.class, args);
